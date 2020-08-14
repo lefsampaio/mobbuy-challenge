@@ -1,0 +1,17 @@
+<label class="filtro-select">Filtro:
+  <select  [(ngModel)]="houseSelected" (ngModelChange)="onChange($event)">
+    <option value="0"> --Selecione--</option>
+    <option *ngFor="let house of houses" [ngValue]="house">{{house}} </option>
+  </select>
+  <div class="characters-container">
+    <ul class="characters">
+      <li *ngFor="let c of characters" class="character" (click)="goToDetailsByState(c)">
+        <img id="image" [src]="c.image" width="110" height="150px">
+        <div class="name-container">
+          <span class="character-name">{{c.name}}</span>
+          <span class="actor-name">{{c.actor}}</span>
+        </div>
+
+      </li>
+    </ul>
+  </div>

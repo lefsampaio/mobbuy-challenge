@@ -1,0 +1,22 @@
+<section class="details-card">
+  <div *ngIf="character" class="div-container">
+    <div class="card-content">
+      <div class="img">
+        <img id="image" [src]="character.image" width="150px" height="200px">
+      </div>
+      <div class="card-desc">
+        <h3>{{character.name}}</h3>
+        <p>Gender: {{character.gender}}</p>
+        <p>House: {{character.house}}</p>
+        <p>Patronus:{{character.patronus}}</p>
+        <li> Wand:
+          <ul>Core:{{character.wand.core}}</ul>
+          <ul>Length:{{character.wand.length}}</ul>
+          <ul>Wood: {{character.wand.wood}}</ul>
+          <p>Species:{{character.species}}</p>
+          <br>
+          <a routerLink="/character" class="btn-card">Voltar</a>
+      </div>
+    </div>
+  </div>
+</section>
